@@ -4,7 +4,6 @@ const UserModel = require('./Model/users')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const app = express()
-const port = 3000;
 
 let SignedUser = {};
 
@@ -65,4 +64,4 @@ app.post('/signup',(req,res)=>{
     })
    
 })
-app.listen(port, () => console.log(`listening on port ${port}!`))
+app.listen(process.env.PORT || 5000)
